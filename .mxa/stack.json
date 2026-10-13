@@ -4,35 +4,17 @@
   "engagement": "prototype",
   "for": "internal",
   "project": "daybook-public",
-  "languages": [
-    "javascript",
-    "typescript",
-    "react",
-    "nextjs"
-  ],
+  "languages": ["javascript", "typescript", "react", "nextjs"],
   "baselines": {
     "support": {
       "browsers": "evergreen last 2 + Safari 17+",
-      "devices": [
-        "current iPhone / iOS",
-        "one Android",
-        "a laptop browser"
-      ],
-      "viewports": [
-        375,
-        1280
-      ]
+      "devices": ["current iPhone / iOS", "one Android", "a laptop browser"],
+      "viewports": [375, 1280]
     },
     "a11y": "WCAG 2.2 AA (defaults, unconfirmed: prototype)",
     "performance": null,
     "seo": null,
-    "licences": [
-      "MIT",
-      "Apache-2.0",
-      "BSD-2-Clause",
-      "BSD-3-Clause",
-      "ISC"
-    ]
+    "licences": ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC"]
   },
   "stack": {
     "plan": {
