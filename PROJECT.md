@@ -2,7 +2,8 @@
 
 The public version of Daybook: a to-do site with tasks, notes and links, a do date and a due date, a day-by-day list and a month calendar, and an iCloud calendar alongside. No account and no database: tasks live in the visitor's browser. Spec: `docs/specs/daybook.md`. Forked 13 Oct 2026 from the personal build in `experiments/daybook`.
 
-- **Engagement:** prototype, internal, published openly. Repo and host: to confirm.
+- **Engagement:** prototype, internal, published openly. Repo: github.com/madebysandbox/daybook (public). Vercel project madebymany/daybook, git connected: pushes to main deploy to production.
+- **The link:** https://daybook-three-wheat.vercel.app (public, checked 13 Oct 2026: page and calendar route answer without sign-in). The team alias daybook-madebymany.vercel.app serves the same deployment but timed out from the office network on 13 Oct, so it isn't the one handed out.
 - **Look:** white / near-black (follows the device), greyscale, square corners, 1px rules. Colour only for Work (blue) and Home (pink), due states and the Today marker.
 - **Type:** Helvetica Neue (Apple devices), Arial elsewhere. No webfont.
 - **Device target:** phone first; two columns (month + list) from 1024px.

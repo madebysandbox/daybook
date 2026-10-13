@@ -18,7 +18,7 @@
 | Build   | auth      | —                            | none           | no private pages |
 | Verify  | tests     | jest (unit, 40 tests)        | ideal-default  | added |
 | Verify  | precommit / pr / merge / promote | lefthook+biome / lean / github-checks / — | ideal-default | gap |
-| Ship    | deploy    | Vercel (vcs: github), public repo to create | ideal-default  | gap |
+| Ship    | deploy    | Vercel (vcs: github), daybook-three-wheat.vercel.app | ideal-default  | added |
 | Operate | observe / measure | Sentry / PostHog     | ideal-default  | gap |
 
-**Gaps to fill now:** deploy. Not gaps: auth (nothing private).
+**Gaps to fill now:** none for a prototype. Not gaps: auth (nothing private).

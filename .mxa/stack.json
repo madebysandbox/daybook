@@ -127,9 +127,9 @@
       "deploy": {
         "tool": "vercel",
         "source": "ideal-default",
-        "status": "gap",
+        "status": "added",
         "vcs": "github",
-        "notes": "Public repo, name and organisation to confirm."
+        "notes": "madebysandbox/daybook (public), Vercel madebymany/daybook, git connected. Link: https://daybook-three-wheat.vercel.app (public, unauthenticated check passed 13 Oct 2026)."
       }
     },
     "operate": {
