@@ -1,0 +1,237 @@
+/* Motion presets, from mxa-motion. Every number is a token; see scale.css.
+   The reduced-motion block at the foot is part of the contract, not an
+   afterthought: every preset has a form without travel. */
+@layer components {
+  /* rise — one thing entering. */
+  .motion-rise {
+    animation: motion-rise var(--duration-base) var(--ease-out) both;
+  }
+  @keyframes motion-rise {
+    from {
+      opacity: 0;
+      translate: 0 var(--motion-rise, 0.5rem);
+    }
+  }
+
+  /* rise-group — children rise in turn. The stagger is one token and the
+     count stops at eight: everything after lands with the eighth, so a long
+     list arrives within slow + base rather than a second later. On scroll,
+     never write this class into the server HTML: the InView wrapper below
+     adds it, with data-in, only to a group that is below the fold. Without
+     data-in the group rises on mount. */
+  .motion-rise-group > * {
+    animation: motion-rise var(--duration-base) var(--ease-out) both;
+    animation-delay: calc(var(--motion-stagger) * var(--i, 0));
+  }
+  .motion-rise-group[data-in="false"] > * {
+    animation-play-state: paused;
+  }
+  .motion-rise-group > :nth-child(2) {
+    --i: 1;
+  }
+  .motion-rise-group > :nth-child(3) {
+    --i: 2;
+  }
+  .motion-rise-group > :nth-child(4) {
+    --i: 3;
+  }
+  .motion-rise-group > :nth-child(5) {
+    --i: 4;
+  }
+  .motion-rise-group > :nth-child(6) {
+    --i: 5;
+  }
+  .motion-rise-group > :nth-child(7) {
+    --i: 6;
+  }
+  .motion-rise-group > :nth-child(n + 8) {
+    --i: 7;
+  }
+
+  /* press — a physical give, and no give on the way back up. */
+  .motion-press {
+    transition: scale var(--duration-fast) var(--ease-out);
+  }
+  .motion-press:active {
+    scale: var(--motion-press, 0.97);
+    transition-duration: 0s;
+  }
+
+  /* hover — colour only. Nothing travels. */
+  .motion-hover {
+    transition:
+      color var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out),
+      border-color var(--duration-fast) var(--ease-out),
+      opacity var(--duration-fast) var(--ease-out);
+  }
+
+  /* pop — a popup opening from its trigger. Base UI sets the attributes and
+     --transform-origin; the popup only has to read them. Springs in on
+     snap, leaves faster than it came. */
+  .motion-pop {
+    transform-origin: var(--transform-origin, center);
+    transition:
+      opacity var(--duration-spring-snap) var(--ease-spring-snap),
+      scale var(--duration-spring-snap) var(--ease-spring-snap);
+  }
+  .motion-pop[data-starting-style],
+  .motion-pop[data-ending-style] {
+    opacity: 0;
+    scale: var(--motion-pop, 0.95);
+  }
+  .motion-pop[data-ending-style] {
+    transition-duration: var(--duration-fast);
+    transition-timing-function: var(--ease-in);
+  }
+
+  /* slide — a sheet or drawer along one axis. Set --motion-from to the edge:
+     100% for a sheet from the bottom, -100% from the top; use --motion-axis
+     for x. The backdrop only fades. */
+  .motion-slide {
+    transition:
+      translate var(--duration-slow) var(--ease-out),
+      opacity var(--duration-slow) var(--ease-out);
+  }
+  .motion-slide[data-starting-style],
+  .motion-slide[data-ending-style] {
+    translate: var(--motion-from-x, 0) var(--motion-from-y, 100%);
+  }
+  .motion-slide[data-ending-style] {
+    transition-duration: var(--duration-base);
+    transition-timing-function: var(--ease-in);
+  }
+  .motion-slide-backdrop {
+    transition: opacity var(--duration-slow) var(--ease-out);
+  }
+  .motion-slide-backdrop[data-starting-style],
+  .motion-slide-backdrop[data-ending-style] {
+    opacity: 0;
+  }
+
+  /* reveal-height — the one layout transition in the set, bounded to base.
+     Grid rows interpolate between 0fr and 1fr in every browser; the child
+     needs min-height 0 to be allowed to shrink. Content fades in after the
+     box has moved, so what is seen is a box growing and then filling. */
+  .motion-reveal {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--duration-base) var(--ease-out);
+  }
+  .motion-reveal[data-open] {
+    grid-template-rows: 1fr;
+  }
+  .motion-reveal > * {
+    min-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity var(--duration-fast) var(--ease-out);
+  }
+  .motion-reveal[data-open] > * {
+    opacity: 1;
+    transition-delay: var(--duration-fast);
+  }
+
+  /* swap — the incoming crossfades over the outgoing; a touch of blur on the
+     outgoing hides the pixel-level mismatch two layouts always have. */
+  .motion-swap-in {
+    animation: motion-swap-in var(--duration-base) var(--ease-out) both;
+  }
+  .motion-swap-out {
+    animation: motion-swap-out var(--duration-fast) var(--ease-in) both;
+  }
+  @keyframes motion-swap-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes motion-swap-out {
+    to {
+      opacity: 0;
+      filter: blur(2px);
+    }
+  }
+
+  /* shake — three oscillations, a quarter rem, and done. */
+  .motion-shake {
+    animation: motion-shake var(--duration-slow) var(--ease-in-out);
+  }
+  @keyframes motion-shake {
+    17% {
+      translate: calc(-1 * var(--motion-shake, 0.25rem)) 0;
+    }
+    33% {
+      translate: var(--motion-shake, 0.25rem) 0;
+    }
+    50% {
+      translate: calc(-1 * var(--motion-shake, 0.25rem)) 0;
+    }
+    67% {
+      translate: var(--motion-shake, 0.25rem) 0;
+    }
+    83% {
+      translate: calc(-1 * var(--motion-shake, 0.25rem)) 0;
+    }
+  }
+
+  /* flip-icon — a chevron turning over, a hamburger becoming a cross. */
+  .motion-flip {
+    transition: rotate var(--duration-fast) var(--ease-in-out);
+  }
+  .motion-flip[data-open],
+  [data-open] > .motion-flip,
+  [aria-expanded="true"] > .motion-flip {
+    rotate: 180deg;
+  }
+
+  /* tick — the number itself is animated in JS (transitions.ts); this is the
+     part CSS owns: figures that do not reflow the line as they change. */
+  .motion-tick {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* THE REDUCED FORMS. Opacity survives, travel does not, and the presets that
+   are only travel do nothing. Not a blanket duration: 0s, because a fade is
+   still the kindest way to tell someone something changed. */
+@media (prefers-reduced-motion: reduce) {
+  @layer components {
+    .motion-rise,
+    .motion-rise-group > * {
+      animation-name: motion-fade;
+      animation-delay: 0s;
+    }
+    .motion-press:active {
+      scale: 1;
+    }
+    .motion-pop[data-starting-style],
+    .motion-pop[data-ending-style],
+    .motion-slide[data-starting-style],
+    .motion-slide[data-ending-style] {
+      scale: 1;
+      translate: 0 0;
+    }
+    .motion-reveal {
+      transition: none;
+    }
+    .motion-swap-out {
+      animation-name: motion-fade-out;
+    }
+    .motion-shake {
+      animation: none;
+    }
+    .motion-flip {
+      transition: none;
+    }
+  }
+  @keyframes motion-fade {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes motion-fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+}

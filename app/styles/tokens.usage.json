@@ -1,0 +1,432 @@
+{
+  "schema": "designtools.usage/1",
+  "target": "aa",
+  "floors": {
+    "text": 4.5,
+    "shape": 3
+  },
+  "light": {
+    "destructive": {
+      "canvas": {
+        "ratio": 5.61,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 5.61,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 5.61,
+        "use": "text"
+      }
+    },
+    "destructive-subdued-foreground": {
+      "canvas": {
+        "ratio": 7.77,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 7.77,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 7.77,
+        "use": "text"
+      }
+    },
+    "home": {
+      "canvas": {
+        "ratio": 6.41,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 6.41,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 6.41,
+        "use": "text"
+      }
+    },
+    "home-subdued-foreground": {
+      "canvas": {
+        "ratio": 8.99,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 8.99,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 8.99,
+        "use": "text"
+      }
+    },
+    "muted-foreground": {
+      "canvas": {
+        "ratio": 7.97,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 7.97,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 7.97,
+        "use": "text"
+      }
+    },
+    "neutral": {
+      "canvas": {
+        "ratio": 4.74,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 4.74,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 4.74,
+        "use": "text"
+      }
+    },
+    "neutral-subdued-foreground": {
+      "canvas": {
+        "ratio": 7.97,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 7.97,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 7.97,
+        "use": "text"
+      }
+    },
+    "primary": {
+      "canvas": {
+        "ratio": 5.33,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 5.33,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 5.33,
+        "use": "text"
+      }
+    },
+    "primary-subdued-foreground": {
+      "canvas": {
+        "ratio": 8.66,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 8.66,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 8.66,
+        "use": "text"
+      }
+    },
+    "success": {
+      "canvas": {
+        "ratio": 5.49,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 5.49,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 5.49,
+        "use": "text"
+      }
+    },
+    "success-subdued-foreground": {
+      "canvas": {
+        "ratio": 7.78,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 7.78,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 7.78,
+        "use": "text"
+      }
+    },
+    "warning": {
+      "canvas": {
+        "ratio": 1.76,
+        "use": "none"
+      },
+      "overlay": {
+        "ratio": 1.76,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 1.76,
+        "use": "none"
+      }
+    },
+    "warning-subdued-foreground": {
+      "canvas": {
+        "ratio": 18.94,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 18.94,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 18.94,
+        "use": "text"
+      }
+    },
+    "work": {
+      "canvas": {
+        "ratio": 4.65,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 4.65,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 4.65,
+        "use": "text"
+      }
+    },
+    "work-subdued-foreground": {
+      "canvas": {
+        "ratio": 9.25,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 9.25,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 9.25,
+        "use": "text"
+      }
+    }
+  },
+  "dark": {
+    "destructive": {
+      "canvas": {
+        "ratio": 2.53,
+        "use": "none"
+      },
+      "overlay": {
+        "ratio": 2.35,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 2.35,
+        "use": "none"
+      }
+    },
+    "destructive-subdued-foreground": {
+      "canvas": {
+        "ratio": 10.12,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 9.39,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 9.39,
+        "use": "text"
+      }
+    },
+    "home": {
+      "canvas": {
+        "ratio": 3.07,
+        "use": "shape"
+      },
+      "overlay": {
+        "ratio": 2.85,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 2.85,
+        "use": "none"
+      }
+    },
+    "home-subdued-foreground": {
+      "canvas": {
+        "ratio": 7.98,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 7.4,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 7.4,
+        "use": "text"
+      }
+    },
+    "muted-foreground": {
+      "canvas": {
+        "ratio": 14,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 12.99,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 12.99,
+        "use": "text"
+      }
+    },
+    "neutral": {
+      "canvas": {
+        "ratio": 2.47,
+        "use": "none"
+      },
+      "overlay": {
+        "ratio": 2.29,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 2.29,
+        "use": "none"
+      }
+    },
+    "neutral-subdued-foreground": {
+      "canvas": {
+        "ratio": 11.55,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 10.71,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 10.71,
+        "use": "text"
+      }
+    },
+    "primary": {
+      "canvas": {
+        "ratio": 2.27,
+        "use": "none"
+      },
+      "overlay": {
+        "ratio": 2.11,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 2.11,
+        "use": "none"
+      }
+    },
+    "primary-subdued-foreground": {
+      "canvas": {
+        "ratio": 11.17,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 10.36,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 10.36,
+        "use": "text"
+      }
+    },
+    "success": {
+      "canvas": {
+        "ratio": 3.58,
+        "use": "shape"
+      },
+      "overlay": {
+        "ratio": 3.32,
+        "use": "shape"
+      },
+      "surface": {
+        "ratio": 3.32,
+        "use": "shape"
+      }
+    },
+    "success-subdued-foreground": {
+      "canvas": {
+        "ratio": 11.96,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 11.1,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 11.1,
+        "use": "text"
+      }
+    },
+    "warning": {
+      "canvas": {
+        "ratio": 11.2,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 10.4,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 10.4,
+        "use": "text"
+      }
+    },
+    "warning-subdued-foreground": {
+      "canvas": {
+        "ratio": 11.2,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 10.4,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 10.4,
+        "use": "text"
+      }
+    },
+    "work": {
+      "canvas": {
+        "ratio": 2.95,
+        "use": "none"
+      },
+      "overlay": {
+        "ratio": 2.73,
+        "use": "none"
+      },
+      "surface": {
+        "ratio": 2.73,
+        "use": "none"
+      }
+    },
+    "work-subdued-foreground": {
+      "canvas": {
+        "ratio": 11.06,
+        "use": "text"
+      },
+      "overlay": {
+        "ratio": 10.26,
+        "use": "text"
+      },
+      "surface": {
+        "ratio": 10.26,
+        "use": "text"
+      }
+    }
+  }
+}

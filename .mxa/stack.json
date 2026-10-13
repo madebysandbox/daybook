@@ -1,0 +1,212 @@
+{
+  "mxaVersion": "1",
+  "mode": "greenfield",
+  "engagement": "prototype",
+  "for": "internal",
+  "project": "daybook-public",
+  "languages": [
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs"
+  ],
+  "baselines": {
+    "support": {
+      "browsers": "evergreen last 2 + Safari 17+",
+      "devices": [
+        "current iPhone / iOS",
+        "one Android",
+        "a laptop browser"
+      ],
+      "viewports": [
+        375,
+        1280
+      ]
+    },
+    "a11y": "WCAG 2.2 AA (defaults, unconfirmed: prototype)",
+    "performance": null,
+    "seo": null,
+    "licences": [
+      "MIT",
+      "Apache-2.0",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "ISC"
+    ]
+  },
+  "stack": {
+    "plan": {
+      "spec": {
+        "tool": "in-repo-markdown",
+        "source": "ideal-default",
+        "status": "added",
+        "notes": "docs/specs/daybook.md"
+      },
+      "track": {
+        "tool": null,
+        "source": "none",
+        "status": "gap",
+        "notes": "Tasks live in the spec while it is a one-person prototype."
+      }
+    },
+    "design": {
+      "tokens": {
+        "tool": "@designtools/tokens",
+        "source": "ideal-default",
+        "status": "added",
+        "notes": "Command in PROJECT.md (tokens 0.8.0)."
+      },
+      "ui": {
+        "tool": "base-ui",
+        "source": "ideal-default",
+        "status": "present"
+      },
+      "edits": {
+        "tool": "surface",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "motion": {
+        "tool": "css+motion",
+        "source": "ideal-default",
+        "status": "added"
+      },
+      "system": {
+        "tool": "@designtools/manifest",
+        "source": "ideal-default",
+        "status": "gap",
+        "system": "internal",
+        "docs": "internal",
+        "notes": "ds/ folder with @ds/* alias and Biome boundary; no manifest or docs yet."
+      }
+    },
+    "build": {
+      "framework": {
+        "tool": "next-react-ts",
+        "source": "ideal-default",
+        "status": "present",
+        "notes": "Public version of the personal Daybook build."
+      },
+      "styling": {
+        "tool": "tailwind-v4",
+        "source": "ideal-default",
+        "status": "present"
+      },
+      "api": {
+        "tool": null,
+        "source": "none",
+        "status": "present",
+        "owner": "none",
+        "contract": null,
+        "availability": "live",
+        "notes": "No database: tasks live in the browser (localStorage, lib/local-store.ts). One route, app/api/calendar, fetches iCloud .ics feeds for the browser (POST body, https *.icloud.com only, 5MB/10s caps, nothing stored)."
+      },
+      "auth": {
+        "tool": null,
+        "source": "none",
+        "status": "gap",
+        "notes": "No private pages: a public tool with nothing stored server-side."
+      }
+    },
+    "verify": {
+      "precommit": {
+        "tool": "lefthook+biome",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "pr": {
+        "tool": "lean",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "merge": {
+        "tool": "github-checks",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "promote": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "tests": {
+        "tool": "jest+playwright+axe",
+        "source": "ideal-default",
+        "status": "added",
+        "notes": "Layer 1: placement, repeat, ics, storage parsing and the feed allow-list (40 tests)."
+      }
+    },
+    "ship": {
+      "pipeline": {
+        "tool": "github-actions",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "deploy": {
+        "tool": "vercel",
+        "source": "ideal-default",
+        "status": "gap",
+        "vcs": "github",
+        "notes": "Public repo, name and organisation to confirm."
+      }
+    },
+    "operate": {
+      "observe": {
+        "tool": "sentry",
+        "source": "ideal-default",
+        "status": "gap"
+      },
+      "measure": {
+        "tool": "posthog",
+        "source": "ideal-default",
+        "status": "gap"
+      }
+    },
+    "autonomy": {
+      "heal": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "backlog": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      }
+    },
+    "audit": {
+      "a11y": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "performance": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "discoverability": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "code": {
+        "tool": null,
+        "source": "none",
+        "status": "gap"
+      },
+      "security": {
+        "tool": null,
+        "source": "none",
+        "status": "gap",
+        "categories": {
+          "deps": null,
+          "secrets": null,
+          "sast": null,
+          "headers": null,
+          "dast": null
+        }
+      }
+    }
+  }
+}

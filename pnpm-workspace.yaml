@@ -1,0 +1,13 @@
+# pnpm 11 reads settings from here, not package.json. A package whose install
+# script pnpm refuses goes under allowBuilds as `name: true`, written here rather
+# than approved interactively, so CI installs exactly what a laptop does.
+allowBuilds:
+  # Ships prebuilt binaries; its script only compiles a fallback.
+  '@parcel/watcher': false
+  # jest's resolver; prebuilt binary, the script is only a fallback check.
+  unrs-resolver: false
+
+# pnpm 11 waits a day before installing any newly published version. @designtools
+# is the suite's own scope and is adopted the day it ships, so it is exempt.
+minimumReleaseAgeExclude:
+  - "@designtools/*"

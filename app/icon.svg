@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Daybook</title>
+  <rect width="64" height="64" fill="#111111"/>
+  <rect x="14" y="20" width="36" height="2" fill="#ffffff"/>
+  <rect x="14" y="31" width="36" height="2" fill="#ffffff" opacity="0.55"/>
+  <rect x="14" y="42" width="22" height="2" fill="#ffffff" opacity="0.55"/>
+  <circle cx="47" cy="43" r="4" fill="#5b8cf0"/>
+</svg>
